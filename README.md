@@ -1,4 +1,17 @@
-# Timetracker
+# How To
+
+- Clone this Repo and the API of timetracker - you can find it [here](https://github.com/chamabreu/timetracker_node)
+- cd to both Projects and do the "npm install" to install all node_modules
+- To get connection to the MongoDB you need a valid URI.
+- Place a .env file in the root of the "timetracker_node" Project and add your URI to a variable like this:
+  - MONGODB_URI=YOUR_URI_GOES_HERE
+- A bit of dummy Data should exist.
+- run in both projects "npm start" to start them
+- The frontend runs on "localhost:3000" and the backend on "localhost:5000"
+- Open your browser and go to "localhost:3000"
+
+
+# Timetracker Daylog
 
 09:00 - 09:30: Understanding and Set Up for Project (Picture #1)
 
@@ -55,3 +68,6 @@ Tasks:
 - 16:20 - 16:40: Implementing Table in Recordings. First Time I used a table from Bootstrap. Worked fine.
 ---
  16:40 - 18:00 Finishing up for Distribution
+
+
+# Summary
