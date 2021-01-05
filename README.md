@@ -21,7 +21,7 @@ Pausing this and going to Backend
 12:15 - 13:00: Break
 
 
-13:00 - : Task 3 - Recordings
+13:00 - 14:11: Task 3 - Recordings
 13:00 - 13:12: Whiteboard Layout (Picture #3)
 13:12 - 13:43: API Call for all Tasks and List them
 13:43 - 14:06: Implemented search for descriptions
@@ -29,10 +29,10 @@ Pausing this and going to Backend
 Discovered that Bootstrap has a Pagination Component.
 Skipping this step and go optimizing the App.
 
-14:11 :Optimizing Process
+14:11 - : Optimizing Process
 Tasks:
 - Dateform
+- 15:00 - : Better counter logic
 - Reset Counter on Tasktracker when save
 - User Feedback for Saving
-- Tasktracker better and cleaner UI
-- Recordings better and cleaner UI
+- 14:11 - 15:00: better and cleaner UI

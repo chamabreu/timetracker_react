@@ -1,6 +1,6 @@
 /* IMPORTS */
 import { useEffect, useState } from "react";
-import { Container, Button } from "react-bootstrap";
+import { Container, Button, Row, Col } from "react-bootstrap";
 
 /* COUNTER COMPONENT */
 export default function Counter() {
@@ -58,19 +58,30 @@ export default function Counter() {
 
   /* Render the components */
   return (
-    <Container className="counter-box">
-      <Button onClick={toggleTimer}>
-        {running
-          ?
-          "Pause"
-          :
-          (timer !== 0)
-            ? "Resume"
-            :
-            "Start"}
-      </Button>
-      <input readOnly type="text" value={formattedTime} className="m-2"/>
-      <Button onClick={resetTimer}>Reset</Button>
+    <Container className="style-box">
+      <Row className="justify-content-center">
+        <h2>A Simple Counter</h2>
+      </Row>
+      <Row className="justify-content-center">
+        <Col className="d-flex justify-content-end">
+          <Button className="resume-counter" onClick={toggleTimer}>
+            {running
+              ?
+              "Pause"
+              :
+              (timer !== 0)
+                ? "Resume"
+                :
+                "Start"}
+          </Button>
+        </Col>
+        <Col className="justify-content-center">
+          <input className="form-control" readOnly type="text" value={formattedTime} />
+        </Col>
+        <Col className="d-flex justify-content-start">
+          <Button className="reset-counter" variant="danger" onClick={resetTimer}>Reset</Button>
+        </Col>
+      </Row>
 
     </Container>
   )

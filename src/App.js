@@ -9,23 +9,17 @@ import Recordings from "./Recordings/Recordings";
 function App() {
   return (
     <>
-      <Container>
-        <Navbar bg="light" expand="lg">
+        <Navbar bg="light" expand="lg" className="justify-content-center">
           <Navbar.Brand>
             JMB TT
           </Navbar.Brand>
           <Nav>
             <Nav.Link href="/counter">Counter</Nav.Link>
-          </Nav>
-          <Nav>
             <Nav.Link href="/tasktracker">Tasktracker</Nav.Link>
-          </Nav>
-          <Nav>
             <Nav.Link href="/recordings">Recordings</Nav.Link>
           </Nav>
         </Navbar>
 
-      </Container>
 
       <Switch>
         <Route path="/counter">

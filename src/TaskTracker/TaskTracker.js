@@ -56,19 +56,15 @@ export default function TaskTracker() {
 
 
   return (
-    <Container>
-      <Row>
-        <TaskDetails date={date} changeTaskName={changeTaskName} taskName={taskName} changeTaskDescription={changeTaskDescription} />
+    <Container className="style-box">
+      <TaskDetails date={date} changeTaskName={changeTaskName} taskName={taskName} changeTaskDescription={changeTaskDescription} />
+      <TaskCounter duration={duration} setDuration={setDuration} />
+      <Row className="justify-content-center mb-3">
+        <Button className="save-button" onClick={saveTask}>Save</Button>
+        <Button className="reset-all-button" variant="danger" onClick={resetAll}>Reset All</Button>
       </Row>
-      <Row>
-        <TaskCounter duration={duration} setDuration={setDuration} />
-      </Row>
-      <Row>
-        <Button onClick={saveTask}>Save</Button>
-        <Button onClick={resetAll}>Reset All</Button>
-      </Row>
-      <Row>
-        {userMessage !== "" ? userMessage : null}
+      <Row className="mb-3 justify-content-center">
+        {userMessage !== "" ? userMessage : "Enter Task Name and Description"}
       </Row>
     </Container>
   )
