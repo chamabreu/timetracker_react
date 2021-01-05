@@ -74,7 +74,7 @@ export default function Counter() {
 
   /* Render the components */
   return (
-    <Container className="style-box">
+    <Container className="mt-3">
       <Row className="justify-content-center">
         <h2>A Simple Counter</h2>
       </Row>

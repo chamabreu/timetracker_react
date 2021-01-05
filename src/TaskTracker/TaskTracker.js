@@ -8,7 +8,7 @@ import TaskDetails from "./TaskDetails";
 
 export default function TaskTracker() {
   /* TASK DETAILS STATES */
-  const [date, setDate] = useState(0)
+  const [date, setDate] = useState(Date.now())
   const [readableDate, setReadableDate] = useState("")
   const [dateTimer, setDateTimer] = useState(null)
   const [taskName, setTaskName] = useState("")
@@ -48,7 +48,11 @@ export default function TaskTracker() {
   }, [dateTimer])
 
   useEffect(() => {
-    setReadableDate(new Date(date).toLocaleString())
+    if (date === 0) {
+      setReadableDate("Getting Time")
+    } else {
+      setReadableDate(new Date(date).toLocaleString())
+    }
   }, [date])
 
 
@@ -159,7 +163,10 @@ export default function TaskTracker() {
 
 
   return (
-    <Container className="style-box">
+    <Container className="mt-3">
+      <Row className="justify-content-center">
+        <h2>Track your Tasks</h2>
+      </Row>
       <TaskDetails date={readableDate} changeTaskName={changeTaskName} taskName={taskName} changeTaskDescription={changeTaskDescription} taskDescription={taskDescription} />
       <TaskCounter
         timer={timer}

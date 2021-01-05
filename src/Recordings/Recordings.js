@@ -40,7 +40,10 @@ export default function Recordings() {
 
   if (allRecordings) {
     return (
-      <Container>
+      <Container className="mt-3">
+        <Row className="justify-content-center">
+          <h2>Your Recordings</h2>
+        </Row>
         <Row>
           {allRecordings
             ? <input className="form-control mt-2 mb-2" placeholder="Search Description" onChange={e => liveSearch(e)} />
@@ -51,12 +54,14 @@ export default function Recordings() {
 
         </Row>
 
-      </Container>
+      </Container >
     )
   } else {
     return (
-      <Container>
-        You have no Tasks recorded
+      <Container className="mt-3">
+        <Row className="justify-content-center">
+          <h4>You have no Tasks recorded</h4>
+        </Row>
       </Container>
     )
   }

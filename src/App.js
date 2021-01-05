@@ -9,6 +9,7 @@ import Recordings from "./Recordings/Recordings";
 function App() {
   return (
     <>
+      <Container>
         <Navbar bg="light" expand="lg" className="justify-content-center">
           <Navbar.Brand>
             JMB TT
@@ -19,6 +20,7 @@ function App() {
             <Nav.Link href="/recordings">Recordings</Nav.Link>
           </Nav>
         </Navbar>
+      </Container>
 
 
       <Switch>
