@@ -3,6 +3,7 @@ import { Link, Route, Switch } from "react-router-dom";
 import Counter from "./Counter/Counter";
 import TaskTracker from "./TaskTracker/TaskTracker";
 import './style.css'
+import Recordings from "./Recordings/Recordings";
 
 
 function App() {
@@ -34,7 +35,7 @@ function App() {
           <TaskTracker />
         </Route>
         <Route path="/recordings">
-          <h1>recordings</h1>
+          <Recordings />
 
         </Route>
       </Switch>
