@@ -69,5 +69,26 @@ Tasks:
 ---
  16:40 - 18:00 Finishing up for Distribution
 
+---
 
 # Summary
+
+This was fun. It's a bit sad that I could not complete the last Task with the Pagination. But I am happy with the Result so far.
+
+I had a bit struggle with UI Design. Thats not my favorite thing.
+
+What I "learned on the go" was the handling with Dates and the Table.
+
+---
+
+# And now?
+
+## What I would implement, if I had more Time:
+
+- Docker for easier distribution
+- Better statemanagement on TaskTracker. Would use useContext() and/or useReducer() or maybe Redux. This I did not so often, so I decided to stick to the "simple" useState and props.
+- Delete option to delete Tasks from Database
+- Local MongoDB-usage for better sharing
+- Pagination, of course. I had somthing like Datatables in mind, while I worked on the Recordings-Page. There would be an Pagination option integrated. But never implemented it in React so I decided to go with the "simple form" of a table.
+- The Backend is to "simple". I would implement better errorhandling, userfeedback etc...
+- And then, maybe the most important, better documentation. On the Counter.js I started with documentation, but at the end it got a bit lost. I think with more Routine and daily business this will be a high priority task in future.
