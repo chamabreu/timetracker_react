@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Container, Button} from "react-bootstrap";
 
 export default function Counter() {
   const [running, setRunning] = useState(false)
   const [timer, setTimer] = useState(0)
   const [timerInterval, setTimerInterval] = useState(null)
+  const [formattedTime, setformattedTime] = useState("")
 
 
   const toggleTimer = () => {
@@ -32,11 +33,15 @@ export default function Counter() {
     }
   }
 
+  
+  useEffect(() => {
+    setformattedTime(new Date(timer * 1000).toISOString().substr(11, 8))
+  }, [timer])
 
   return (
     <Container>
       <Button onClick={toggleTimer}>{running ? "Pause" : "Start"}</Button>
-      <input type="text" value={timer} />
+      <input type="text" value={formattedTime} />
       <Button onClick={resetTimer}>Reset</Button>
 
     </Container>
