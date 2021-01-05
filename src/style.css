@@ -1,0 +1,8 @@
+.counter-box {
+  /* border: 1px solid rgb(121, 121, 121); */
+  background-color: rgba(195, 234, 255, 0.577);
+  border-radius: 5px;
+  box-shadow: 0px 0px 3px 3px  rgba(90, 197, 255, 0.393);
+  padding: 1rem;
+  margin: 1rem;
+}
