@@ -1,7 +1,8 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
-import { Container, Row } from "react-bootstrap"
-import Task from "./Task"
+import { Container, Row, Table } from "react-bootstrap"
+import TaskTable from "./TaskTable"
+import Task from "./TaskTable"
 
 
 export default function Recordings() {
@@ -39,24 +40,18 @@ export default function Recordings() {
 
   if (allRecordings) {
     return (
-      <Container className="mt-3">
+      <Container>
         <Row>
           {allRecordings
-            ? <input placeholder="Search Description" onChange={e => liveSearch(e)} />
+            ? <input className="form-control mt-2 mb-2" placeholder="Search Description" onChange={e => liveSearch(e)} />
             : null}
         </Row>
-        {recordings.length !== 0
-          ? recordings.map(task => {
-            return (
-              <Row className="mb-2">
-                <Task key={task._id} taskName={task.taskname} taskDescription={task.taskdescription} duration={task.duration} date={task.date} />
-              </Row>
-            )
-          })
-          : "No Match with " + query
-        }
-      </Container>
+        <Row>
+          <TaskTable recordings={recordings} />
 
+        </Row>
+
+      </Container>
     )
   } else {
     return (

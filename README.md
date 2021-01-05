@@ -31,8 +31,8 @@ Skipping this step and go optimizing the App.
 
 14:11 - : Optimizing Process
 Tasks:
-- Dateform
-- 15:00 - : Better counter logic
-- Reset Counter on Tasktracker when save
-- User Feedback for Saving
 - 14:11 - 15:00: better and cleaner UI
+- 15:00 - 15:30: Counter logic now depends on Date.now() to ensure a stable time measurement
+- 15:30 - 15:50: Shifted TaskCounter up to be able to reset Counter on Tasktracker
+- 15:50 - 16:20: Updated Timeview in Tasktracker and Recordings. Now the Time and Date is good to read. User Feedback for Saving implemented.
+- 16:20 - 16:40: Implementing Table in Recordings. First Time I used a table from Bootstrap. Worked fine.
