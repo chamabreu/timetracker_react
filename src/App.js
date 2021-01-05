@@ -1,5 +1,5 @@
-import { Container, Nav, Navbar } from "react-bootstrap";
-import { Link, Route, Switch } from "react-router-dom";
+import { Container, Nav, Navbar, Row } from "react-bootstrap";
+import { Route, Switch } from "react-router-dom";
 import Counter from "./Counter/Counter";
 import TaskTracker from "./TaskTracker/TaskTracker";
 import './style.css'
@@ -12,7 +12,11 @@ function App() {
       <Container>
         <Navbar bg="light" expand="lg" className="justify-content-center">
           <Navbar.Brand>
-            JMB TT
+            <Nav>
+              <Nav.Link href="/">
+                <h4>Time Tracker</h4>
+            </Nav.Link>
+            </Nav>
           </Navbar.Brand>
           <Nav>
             <Nav.Link href="/counter">Counter</Nav.Link>
@@ -24,15 +28,24 @@ function App() {
 
 
       <Switch>
-        <Route path="/counter">
+        <Route exact path="/counter">
           <Counter />
         </Route>
-        <Route path="/tasktracker">
+        <Route exact path="/tasktracker">
           <TaskTracker />
         </Route>
-        <Route path="/recordings">
+        <Route exact path="/recordings">
           <Recordings />
-
+        </Route>
+        <Route path="/">
+          <Container className="mt-3">
+            <Row className="justify-content-center">
+              <h2>Welcome to my TimeTracker Project.</h2>
+            </Row>
+            <Row className="justify-content-center">
+              <p>Choose a site from the Navbar</p>
+            </Row>
+          </Container>
         </Route>
       </Switch>
     </>
