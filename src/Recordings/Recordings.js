@@ -13,6 +13,8 @@ export default function Recordings() {
     axios.get('http://localhost:5000/api/recordings')
       .then(result => {
         const recordingsArray = result.data
+        recordingsArray.sort((a, b) => { return b.date - a.date })
+
 
         if (recordingsArray.length !== 0) {
           setAllRecordings(recordingsArray)
