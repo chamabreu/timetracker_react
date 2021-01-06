@@ -92,3 +92,8 @@ What I "learned on the go" was the handling with Dates and the Table.
 - Pagination, of course. I had somthing like Datatables in mind, while I worked on the Recordings-Page. There would be an Pagination option integrated. But never implemented it in React so I decided to go with the "simple form" of a table.
 - The Backend is to "simple". I would implement better errorhandling, userfeedback etc...
 - And then, maybe the most important, better documentation. On the Counter.js I started with documentation, but at the end it got a bit lost. I think with more Routine and daily business this will be a high priority task in future.
+
+# Extending
+
+I want to extend the App. You can find different Branches to see how I extend the App over the next days.
+This is just a personal decision to learn and train on the existing project.
