@@ -4,6 +4,7 @@ import Counter from "./Counter/Counter";
 import TaskTracker from "./TaskTracker/TaskTracker";
 import './style.css'
 import Recordings from "./Recordings/Recordings";
+import GraphQLTest from "./GraphQL/GraphQLTest";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
             <Nav.Link href="/counter">Counter</Nav.Link>
             <Nav.Link href="/tasktracker">Tasktracker</Nav.Link>
             <Nav.Link href="/recordings">Recordings</Nav.Link>
+            <Nav.Link href="/graphql">GraphQL</Nav.Link>
           </Nav>
         </Navbar>
       </Container>
@@ -36,6 +38,9 @@ function App() {
         </Route>
         <Route exact path="/recordings">
           <Recordings />
+        </Route>
+        <Route exact path="/graphql">
+          <GraphQLTest />
         </Route>
         <Route path="/">
           <Container className="mt-3">
